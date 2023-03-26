@@ -13,10 +13,14 @@ public class JEP356 {
         allPRNGs.map(prng ->
                 prng.name() + " [ Group: " + prng.group() + "; "
                         + (prng.isArbitrarilyJumpable() ? " arbitrary-jump" : "")
-                        + (prng.isHardware() ? " hardware" : "") + (prng.isJumpable() ? " jump" : "")
-                        + (prng.isLeapable() ? " leap" : "") + (prng.isSplittable() ? " split" : "")
-                        + (prng.isStatistical() ? " statistical" : "") + (prng.isStochastic() ? " stochastic" : "")
-                        + (prng.isStreamable() ? " stream" : "") + "; noOfBits: " + prng.stateBits()
+                        + (prng.isHardware() ? " hardware" : "")
+                        + (prng.isJumpable() ? " jump" : "")
+                        + (prng.isLeapable() ? " leap" : "")
+                        + (prng.isSplittable() ? " split" : "")
+                        + (prng.isStatistical() ? " statistical" : "")
+                        + (prng.isStochastic() ? " stochastic" : "")
+                        + (prng.isStreamable() ? " stream" : "")
+                        + "; noOfBits: " + prng.stateBits()
                         + "]"
         ).sorted().forEach(System.out::println);
 
